@@ -20,9 +20,9 @@ public Plugin:myinfo =
 public OnPluginStart()
 {
 	// Load the gamedata file.
-	new Handle:hGameConf = LoadGameConfigFile("csgo_movement_unlocker.games");
+	new Handle:hGameConf = LoadGameConfigFile("movementunlocker.games");
 	if(hGameConf == INVALID_HANDLE)
-		SetFailState("Can't find csgo_movement_unlocker.games.txt gamedata.");
+		SetFailState("Can't find movementunlocker.games.txt gamedata.");
 	
 	// Get the address near our patch area inside CGameMovement::WalkMove
 	new Address:iAddr = GameConfGetAddress(hGameConf, "WalkMoveMaxSpeed");
